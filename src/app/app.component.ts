@@ -9,6 +9,13 @@ export class AppComponent {
   title = 'angular';
 
   onInput(event: Event){
-    console.log( (<HTMLInputElement>event.target).value)
+
+    this.title = (<HTMLInputElement>event.target).value
+  }
+
+  onClick(event: Event){
+
+    this.title = "Ho cliccato sul bottone"
   }
 }
+
