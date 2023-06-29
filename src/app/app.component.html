@@ -1,20 +1,27 @@
 <!-- <app-prova></app-prova> -->
 
-<button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+<!-- <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
 
 <mat-form-field class="example-full-width">
   <mat-label>Favorite food</mat-label>
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" />
 </mat-form-field>
-<p>{{title}}</p>
+<p>{{title}}</p> -->
 
 <!-- <p *ngIf="isVisible">e visibile!</p>
 <p *ngIf="!isVisible">non e visibile!</p> -->
 
-<p *ngIf="isVisible; then bloccoIf else bloccoElse" ></p>
+<!-- <p *ngIf="isVisible; then bloccoIf else bloccoElse" ></p>
 <ng-template #bloccoIf >
     <p>sono visibile</p>
 </ng-template>
 <ng-template #bloccoElse >
     <p>non sono visibile</p>
-</ng-template>
+</ng-template> -->
+
+
+    <div *ngFor="let persona of persone">
+        <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
+        <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
+        <p>{{ persona.nome }} - {{ persona.cognome }}</p>
+    </div>

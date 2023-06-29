@@ -1,0 +1,11 @@
+.cerchioVerde {
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+}
+
+.cerchioRosso {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(244, 16, 16);
+}
