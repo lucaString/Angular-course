@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
+
   isVisible = true
+
+  numero = 3;
+
   persone = [
     {nome: "Luca", cognome: "String", isOnline: true},
     {nome: "Marco", cognome: "Array", isOnline: false},
