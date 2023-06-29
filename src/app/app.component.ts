@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
-
+  isVisible = true
   onInput(event: Event){
 
     this.title = (<HTMLInputElement>event.target).value
