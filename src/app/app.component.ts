@@ -10,6 +10,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
   title = 'angular';
   @ViewChild('inputSaluti') inputSaluti!: ElementRef
 
+  colore = 'blue';
+
+  cambiaColoreEvidenziatore(colore: string) {
+    this.colore = colore
+  }
+
   persone = [
     {nome: "Luca", cognome: "String", isOnline: true, color: 'blue'},
     {nome: "Marco", cognome: "Array", isOnline: false, color: 'red'},
