@@ -1,7 +1,9 @@
 import {
   Component,
   OnInit,
-  Input
+  Input,
+  Output,
+  EventEmitter
 } from '@angular/core';
 
 @Component({
@@ -26,7 +28,14 @@ export class ProvaComponent
   //   }
   // ];
 
-  @Input() data: any;
+  // @Input() data: any;
+  @Output() mandaDatiEvento = new EventEmitter<string>();
+
+  nome = 'Luca'
+
+  mandaDati() {
+    this.mandaDatiEvento.emit(this.nome)
+  }
 
   constructor() {
     console.log('costruttore');
@@ -34,7 +43,5 @@ export class ProvaComponent
   
 
   ngOnInit(): void {
-    console.log(this.data);
-
   }
 }

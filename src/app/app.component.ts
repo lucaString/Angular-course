@@ -16,6 +16,10 @@ export class AppComponent {
     {nome: "Jon", cognome: "Object", isOnline: false, color: 'purple'},
   ]
 
+  onRiceviDati(value: string) {
+    console.log(value)
+  }
+
   // isVisible = true
 
   // numero = 3;
