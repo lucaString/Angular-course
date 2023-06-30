@@ -5,6 +5,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
+import { ServizioProvaService } from '../servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-prova',
@@ -29,19 +30,20 @@ export class ProvaComponent
   // ];
 
   // @Input() data: any;
-  @Output() mandaDatiEvento = new EventEmitter<string>();
+  // @Output() mandaDatiEvento = new EventEmitter<string>();
 
-  nome = 'Luca'
+  // nome = 'Luca'
 
-  mandaDati() {
-    this.mandaDatiEvento.emit(this.nome)
-  }
+  // mandaDati() {
+  //   this.mandaDatiEvento.emit(this.nome)
+  // }
 
-  constructor() {
-    console.log('costruttore');
+  constructor(private servizioProva: ServizioProvaService) {
+  
   }
   
 
   ngOnInit(): void {
+    console.log(this.servizioProva.persone)
   }
 }
