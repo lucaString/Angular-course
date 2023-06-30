@@ -8,17 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular';
 
-  isVisible = true
-
-  numero = 3;
-
   persone = [
-    {nome: "Luca", cognome: "String", isOnline: true},
-    {nome: "Marco", cognome: "Array", isOnline: false},
-    {nome: "Andrea", cognome: "Boolean", isOnline: false},
-    {nome: "Billy", cognome: "Variable", isOnline: true},
-    {nome: "Jon", cognome: "Object", isOnline: false},
+    {nome: "Luca", cognome: "String", isOnline: true, color: 'blue'},
+    {nome: "Marco", cognome: "Array", isOnline: false, color: 'red'},
+    {nome: "Andrea", cognome: "Boolean", isOnline: false, color: 'green'},
+    {nome: "Billy", cognome: "Variable", isOnline: true, color: 'yellow'},
+    {nome: "Jon", cognome: "Object", isOnline: false, color: 'purple'},
   ]
+
+  // isVisible = true
+
+  // numero = 3;
 
   onInput(event: Event){
 

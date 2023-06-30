@@ -39,9 +39,13 @@
     <p *ngSwitchDefault>default</p>
 </div> -->
 
-<ul>
+<!-- ngStyle -->
+<!-- <ul>
     <li *ngFor="let persona of persone ">
         <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
         <p>{{ persona.nome }} {{ persona.cognome }}</p>
     </li>
-</ul>
+</ul> -->
+
+
+<app-prova [data]="persone"></app-prova>
