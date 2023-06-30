@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewChecked {
+  
   title = 'angular';
+  @ViewChild('inputSaluti') inputSaluti!: ElementRef
 
   persone = [
     {nome: "Luca", cognome: "String", isOnline: true, color: 'blue'},
@@ -15,6 +17,16 @@ export class AppComponent {
     {nome: "Billy", cognome: "Variable", isOnline: true, color: 'yellow'},
     {nome: "Jon", cognome: "Object", isOnline: false, color: 'purple'},
   ]
+
+  ngOnInit(): void {
+    console.log('OnInit');
+    console.log(this.inputSaluti);
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('AfterViewChecked');
+    console.log(this.inputSaluti);
+  }
 
   onRiceviDati(value: string) {
     console.log(value)
@@ -35,4 +47,3 @@ export class AppComponent {
   }
 
 }
-
